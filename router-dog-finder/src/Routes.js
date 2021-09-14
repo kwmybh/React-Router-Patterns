@@ -1,9 +1,9 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import DogFilter from './DogFilter';
 import DogList from './DogList';
+import DogFilter from './DogFilter';
 
-const Routes = ({ dogs }) => {
+function Routes({ dogs }) {
 	return (
 		<Switch>
 			<Route exact path="/dogs">
@@ -15,5 +15,6 @@ const Routes = ({ dogs }) => {
 			<Redirect to="/dogs" />
 		</Switch>
 	);
-};
+}
+
 export default Routes;

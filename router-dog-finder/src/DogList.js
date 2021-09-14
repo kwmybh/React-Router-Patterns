@@ -8,13 +8,13 @@ function DogList({ dogs }) {
 			<div className="row mt-4">
 				<div className="col">
 					<h1 className="text-center">
-						Hi. We got DOGS! Select for more info.
+						Hi! We have DOGS!!!. Click for more info.
 					</h1>
 				</div>
 			</div>
 			<div className="row">
 				{dogs.map((d) => (
-					<div className="col-3 text-center" key={d.name}>
+					<div className="col-3 center text-center" key={d.name}>
 						<img src={d.src} alt={d.name} />
 						<h3 className="mt-3">
 							<Link to={`/dogs/${d.name.toLowerCase()}`}>{d.name}</Link>
@@ -25,4 +25,5 @@ function DogList({ dogs }) {
 		</div>
 	);
 }
+
 export default DogList;

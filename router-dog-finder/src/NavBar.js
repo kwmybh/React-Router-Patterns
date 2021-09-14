@@ -1,9 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import './NavBar.css';
 
-import './Nav.css';
-
-function Nav({ dogs }) {
+function NavBar({ dogs }) {
 	const links = dogs.map((dog) => (
 		<NavLink key={dog.name} to={`/dogs/${dog.name.toLowerCase()}`}>
 			{dog.name}
@@ -19,4 +18,4 @@ function Nav({ dogs }) {
 	);
 }
 
-export default Nav;
+export default NavBar;
